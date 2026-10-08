@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LifeLine — Find Blood Donors in Pakistan</title>
+<meta name="description" content="LifeLine connects blood donors with patients in emergencies across Pakistan. Search donors by blood group and city.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#"><span class="drop">🩸</span> LifeLine</a>
+    <nav class="links">
+      <a href="#search">Find Donors</a>
+      <a href="#register">Become a Donor</a>
+      <a href="#how">How It Works</a>
+    </nav>
+    <a class="btn btn-emergency" href="#search">🆘 Emergency Request</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Pakistan's blood donor network</p>
+    <h1>Find a blood donor in <span>minutes</span>, not hours.</h1>
+    <p class="sub">Every year, patients across Pakistan wait hours for blood in emergencies. LifeLine connects verified donors with hospitals and families — by blood group, by city, instantly.</p>
+
+    <form class="search-card" id="searchForm">
+      <div class="field">
+        <label for="bloodGroup">Blood group</label>
+        <select id="bloodGroup" required>
+          <option value="">Select…</option>
+          <option>A+</option><option>A-</option>
+          <option>B+</option><option>B-</option>
+          <option>O+</option><option>O-</option>
+          <option>AB+</option><option>AB-</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="city">City</label>
+        <select id="city" required>
+          <option value="">Select…</option>
+          <option>Karachi</option><option>Lahore</option>
+          <option>Islamabad</option><option>Peshawar</option>
+          <option>Quetta</option><option>Multan</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Search Donors</button>
+    </form>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><strong data-count="12500">0</strong><span>registered donors</span></div>
+  <div class="stat"><strong data-count="3400">0</strong><span>lives impacted</span></div>
+  <div class="stat"><strong data-count="28">0</strong><span>cities covered</span></div>
+  <div class="stat"><strong data-count="12">0</strong><span>avg. minutes to match</span></div>
+</section>
+
+<section class="results" id="search">
+  <h2>Available donors</h2>
+  <p class="muted" id="resultMeta">Select a blood group and city above to see matching donors.</p>
+  <div class="donor-grid" id="donorGrid"></div>
+</section>
+
+<section class="register" id="register">
+  <div class="register-inner">
+    <div>
+      <h2>Become a donor.</h2>
+      <p>One donation can save up to three lives. Register once — we'll only contact you when someone near you needs your blood group.</p>
+      <ul class="ticks">
+        <li>✓ Free SMS alerts for nearby emergencies</li>
+        <li>✓ Donation reminders every 3 months</li>
+        <li>✓ Your data stays private — shown only on match</li>
+      </ul>
+    </div>
+    <form class="donor-form" id="donorForm">
+      <div class="field"><label>Full name</label><input type="text" id="dName" required placeholder="e.g. Ahmed Khan"></div>
+      <div class="row">
+        <div class="field"><label>Blood group</label>
+          <select id="dGroup" required><option value="">Select…</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>O+</option><option>O-</option><option>AB+</option><option>AB-</option></select>
+        </div>
+        <div class="field"><label>City</label>
+          <select id="dCity" required><option value="">Select…</option><option>Karachi</option><option>Lahore</option><option>Islamabad</option><option>Peshawar</option><option>Quetta</option><option>Multan</option></select>
+        </div>
+      </div>
+      <div class="field"><label>Phone number</label><input type="tel" id="dPhone" required placeholder="03xx-xxxxxxx" pattern="0[0-9]{3}-[0-9]{7}"></div>
+      <button class="btn btn-primary" type="submit">Register as Donor</button>
+      <p class="form-ok" id="formOk" hidden>🎉 Registered! You'll be contacted when your blood group is needed nearby.</p>
+    </form>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><h3>Search</h3><p>Pick the blood group and city. See verified donors nearby instantly.</p></div>
+    <div class="step"><span class="n">2</span><h3>Connect</h3><p>Contact the donor directly — no middlemen, no delays.</p></div>
+    <div class="step"><span class="n">3</span><h3>Save a life</h3><p>Donate at the nearest partner hospital. Done in under an hour.</p></div>
+  </div>
+</section>
+
+<section class="emergency-strip">
+  <h2>Emergency? Don't wait.</h2>
+  <p>If a patient needs blood right now, search above or call our 24/7 helpline:</p>
+  <a class="helpline" href="tel:080011122">0800-111-22</a>
+</section>
+
+<footer>
+  <p><strong>LifeLine</strong> — a UX concept for Pakistan's blood donation crisis. Built with HTML, CSS &amp; JavaScript.</p>
+  <p class="muted">Demo data only. Always verify donors through your hospital's blood bank.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
